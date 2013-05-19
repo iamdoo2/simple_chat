@@ -1,0 +1,17 @@
+
+<div class="demo-row">
+  <% for i in @list %>
+  <div class="alert alert-info">
+    <strong><%= i.username%> : <%= i.content %>
+  </div>
+  <% end %>
+  
+  <div class="last-col">
+    <div class="demo-content ptl">
+      <form action="/chat/chat_list/<%=params[:id]%>">
+        <textarea rows="3" placeholder="comment..." class="span12" name="content"></textarea>
+        <input type="submit" class="btn btn-large btn-primary" value="Talk"></button>
+      </form>
+    </div>
+  </div><!-- /demo-content -->
+</div><!-- /row -->
